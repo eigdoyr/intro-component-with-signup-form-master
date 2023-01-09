@@ -1,0 +1,191 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 99%);
+  --gray: hsl(0, 0%, 46%);
+}
+
+/*** RESET ***/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  font-family: "Poppins", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background-image: url(./images/bg-intro-mobile.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto 120%;
+  background-color: var(--red);
+  color: var(--white);
+}
+
+/*** Mobile ***/
+.main-container {
+  display: grid;
+  padding: 1.85rem;
+  text-align: center;
+}
+
+.main-text,
+.main-claim-form {
+  max-width: 34.635rem;
+}
+
+.main-text {
+  padding: 4rem 0;
+}
+
+.main-lead {
+  font-weight: 400;
+}
+
+.main-title {
+  padding-bottom: 1rem;
+}
+
+.claim-lead,
+.signup-form {
+  border-radius: 0.8rem;
+  box-shadow: 0px 8px 0px 1px rgba(74, 74, 74, 0.301);
+}
+
+.claim-lead {
+  background-color: var(--blue);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.claim-text {
+  padding: 0 2rem;
+}
+
+.claim-styles {
+  font-weight: 600;
+}
+
+.signup-form {
+  background-color: var(--white);
+  text-align: left;
+  padding: 1rem;
+}
+
+.form-input {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--grayish-blue);
+}
+
+.input-field,
+.form-submit {
+  width: 100%;
+  border: 1px solid var(--grayish-blue);
+  padding: 0.75rem;
+  border-radius: 0.3rem;
+}
+
+.input-field {
+  color: var(--gray);
+}
+
+.form-submit {
+  margin-top: 1rem;
+  text-align: center;
+  background-color: var(--green);
+  box-shadow: 0px 2px 0px 1px rgba(54, 130, 97, 0.315);
+}
+
+.submit-btn {
+  width: 100%;
+  height: auto;
+  background-color: var(--green);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--white);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  border: none;
+}
+
+.form-footer {
+  color: var(--grayish-blue);
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.form-terms-style {
+  color: var(--red);
+  font-weight: 700;
+}
+
+/*** Active States ***/
+.form-submit:hover {
+  opacity: 0.6;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.hidden {
+  display: none;
+}
+
+/*** Desktop ***/
+.main-container {
+  grid-template-columns: 1fr 1fr;
+}
