@@ -1,7 +1,7 @@
 :root {
   --red: hsl(0, 100%, 74%);
-  --green: hsl(154, 59%, 51%);
-  --blue: hsl(248, 32%, 49%);
+  --green: hsl(154deg 42% 48%);
+  --blue: hsl(250, 31%, 16%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
   --white: hsl(0, 0%, 99%);
@@ -67,11 +67,17 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  background-image: url(./images/bg-intro-mobile.png);
+  /* background-image: url(./images/bg-intro-mobile.png); */
+  background-image: linear-gradient(
+      182deg,
+      rgb(0 248 237 / 40%),
+      hsl(250deg 78% 7%)
+    ),
+    url(./images/bg-intro-mobile.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: auto 120%;
-  background-color: var(--red);
+  /* background-color: var(--red); */
   color: var(--white);
 }
 
@@ -120,7 +126,8 @@ body {
 }
 
 .signup-form {
-  background-color: var(--white);
+  /* background-color: var(--white); */
+  background-color: hsl(268deg 86% 8% / 8%);
   text-align: left;
   padding: 1rem;
 }
@@ -135,12 +142,12 @@ body {
 .form-submit {
   width: 100%;
   border: 1px solid var(--grayish-blue);
-  padding: 0.75rem;
   border-radius: 0.3rem;
 }
 
 .input-field {
   color: var(--gray);
+  padding: 0.75rem;
 }
 
 .form-submit {
@@ -160,6 +167,7 @@ body {
   letter-spacing: 0.1rem;
   font-weight: 600;
   border: none;
+  padding: 0.75rem;
 }
 
 .form-footer {
@@ -175,10 +183,11 @@ body {
 }
 
 /*** Active States ***/
-.form-submit:hover {
-  opacity: 0.6;
+.submit-btn:hover {
+  /* opacity: 0.6; */
+  background-color: rgba(30, 142, 177, 0.753);
   cursor: pointer;
-  transition: all 0.3s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .input-field:focus {
@@ -190,30 +199,38 @@ body {
 }
 
 /*** Desktop ***/
-body {
-  background-image: url(./images/bg-intro-desktop.png);
-}
+@media (width>=1074px) {
+  body {
+    /* background-image: url(./images/bg-intro-desktop.png); */
+    background-image: linear-gradient(
+        182deg,
+        rgb(0 248 237 / 40%),
+        hsl(250deg 78% 7%)
+      ),
+      url(./images/bg-intro-desktop.png);
+  }
 
-.main-container {
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-}
+  .main-container {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
 
-.main-text {
-  text-align: left;
-}
+  .main-text {
+    text-align: left;
+  }
 
-.main-title {
-  font-size: 3rem;
-  line-height: 3.5rem;
-  padding-bottom: ;
-}
+  .main-title {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    padding-bottom: 2rem;
+  }
 
-.signup-form {
-  padding: 2.5rem;
-}
+  .signup-form {
+    padding: 2.5rem;
+  }
 
-.input-field {
-  padding: 1rem 2.5rem;
+  .input-field {
+    padding: 1rem 2.5rem;
+  }
 }
