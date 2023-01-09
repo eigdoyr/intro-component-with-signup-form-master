@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <div class="main-text">
+          <h1 class="main-title">Learn to code by watching others</h1>
+
+          <p class="main-lead">
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="main-claim-form">
+          <div class="claim-lead">
+            <p class="claim-text">
+              <span class="claim-styles"> Try it free 7 days</span> then $20/mo.
+              thereafter
+            </p>
+          </div>
+          <div class="signup-form">
+            <form id="form" action="/" class="form">
+              <div class="form-input">
+                <label for="fname" hidden>first name</label> <br />
+                <input
+                  class="input-field"
+                  type="text"
+                  id="fname"
+                  name="fname"
+                  value="First Name"
+                  onfocus="this.value=''"
+                  required
+                />
+                <!-- <img
+                  class="hidden invalid-icon"
+                  src="./images/icon-error.svg"
+                  alt=""
+                  aria-hidden="true"
+                /> -->
+                <p class="hidden invalid-input">First Name cannot be empty</p>
+              </div>
+              <div class="form-input">
+                <label for="lname" hidden>last name</label> <br />
+                <input
+                  class="input-field"
+                  type="text"
+                  id="lname"
+                  name="lname"
+                  value="Last Name"
+                  onfocus="this.value=''"
+                  required
+                />
+                <p class="hidden invalid-input">Last Name cannot be empty</p>
+              </div>
+              <div class="form-input">
+                <label for="email" hidden>email address</label> <br />
+                <input
+                  class="input-field"
+                  type="email"
+                  id="email"
+                  name="email"
+                  value="Email"
+                  onfocus="this.value=''"
+                  required
+                />
+                <p class="hidden invalid-input">
+                  Looks like this is not an email
+                </p>
+              </div>
+              <div class="form-input">
+                <label for="lname" hidden>password</label> <br />
+                <input
+                  class="input-field"
+                  type="password"
+                  id="password"
+                  name="lname"
+                  placeholder="Password"
+                  minlength="8"
+                  maxlength="15"
+                  onfocus="this.value=''"
+                  required
+                />
+                <p class="hidden invalid-input">Password cannot be empty</p>
+              </div>
+              <div class="form-submit">
+                <button type="submit" id="submit-btn" class="submit-btn">
+                  Claim your free trial
+                </button>
+              </div>
+              <footer class="form-footer">
+                <p class="form-terms">
+                  By clicking the button, you are agreeing to our
+                  <a
+                    href="https://fakefiller.com/terms"
+                    target="_blank"
+                    class="form-terms-style"
+                    rel="noopener"
+                    >Terms and Services</a
+                  >
+                </p>
+              </footer>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
