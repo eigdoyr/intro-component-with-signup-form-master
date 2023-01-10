@@ -40,7 +40,7 @@
             </p>
           </div>
           <div class="signup-form">
-            <form id="form" action="/" class="form">
+            <form id="form" action="/" class="form" novalidate>
               <div class="form-input">
                 <label for="fname" hidden>first name</label> <br />
                 <input
@@ -58,7 +58,7 @@
                   alt=""
                   aria-hidden="true"
                 /> -->
-                <p class="hidden invalid-input">First Name cannot be empty</p>
+                <small></small>
               </div>
               <div class="form-input">
                 <label for="lname" hidden>last name</label> <br />
@@ -71,7 +71,7 @@
                   onfocus="this.value=''"
                   required
                 />
-                <p class="hidden invalid-input">Last Name cannot be empty</p>
+                <small></small>
               </div>
               <div class="form-input">
                 <label for="email" hidden>email address</label> <br />
@@ -84,9 +84,7 @@
                   onfocus="this.value=''"
                   required
                 />
-                <p class="hidden invalid-input">
-                  Looks like this is not an email
-                </p>
+                <small></small>
               </div>
               <div class="form-input">
                 <label for="lname" hidden>password</label> <br />
@@ -101,7 +99,7 @@
                   onfocus="this.value=''"
                   required
                 />
-                <p class="hidden invalid-input">Password cannot be empty</p>
+                <small></small>
               </div>
               <div class="form-submit">
                 <button type="submit" id="submit-btn" class="submit-btn">
@@ -125,5 +123,6 @@
         </div>
       </div>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>

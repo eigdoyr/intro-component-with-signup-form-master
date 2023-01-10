@@ -68,11 +68,7 @@ body {
   place-content: center;
   min-height: 100vh;
   /* background-image: url(./images/bg-intro-mobile.png); */
-  background-image: linear-gradient(
-      182deg,
-      rgb(0 248 237 / 40%),
-      hsl(250deg 78% 7%)
-    ),
+  background-image: linear-gradient(244deg, rgb(0 255 137 / 35%), rgb(4 42 68)),
     url(./images/bg-intro-mobile.png);
   background-position: center top;
   background-repeat: no-repeat;
@@ -194,8 +190,8 @@ body {
   color: hsl(0, 0%, 0%);
 }
 
-.hidden {
-  display: none;
+small {
+  color: var(--red);
 }
 
 /*** Desktop ***/
@@ -203,9 +199,9 @@ body {
   body {
     /* background-image: url(./images/bg-intro-desktop.png); */
     background-image: linear-gradient(
-        182deg,
-        rgb(0 248 237 / 40%),
-        hsl(250deg 78% 7%)
+        244deg,
+        rgb(0 255 137 / 35%),
+        rgb(4 42 68)
       ),
       url(./images/bg-intro-desktop.png);
   }
