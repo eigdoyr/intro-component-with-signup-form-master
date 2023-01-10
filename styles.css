@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
   --red: hsl(0, 100%, 74%);
   --green: hsl(154deg 42% 48%);
@@ -64,10 +71,17 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   font-family: "Poppins", sans-serif;
+  display: -ms-grid;
   display: grid;
   place-content: center;
   min-height: 100vh;
   /* background-image: url(./images/bg-intro-mobile.png); */
+  background-image: -o-linear-gradient(
+      206deg,
+      rgb(0 255 137 / 35%),
+      rgb(4 42 68)
+    ),
+    url(./images/bg-intro-mobile.png);
   background-image: linear-gradient(244deg, rgb(0 255 137 / 35%), rgb(4 42 68)),
     url(./images/bg-intro-mobile.png);
   background-position: center top;
@@ -79,6 +93,7 @@ body {
 
 /*** Mobile ***/
 .main-container {
+  display: -ms-grid;
   display: grid;
   padding: 1.85rem;
   text-align: center;
@@ -104,6 +119,7 @@ body {
 .claim-lead,
 .signup-form {
   border-radius: 0.8rem;
+  -webkit-box-shadow: 0px 8px 0px 1px rgba(74, 74, 74, 0.301);
   box-shadow: 0px 8px 0px 1px rgba(74, 74, 74, 0.301);
 }
 
@@ -150,6 +166,7 @@ body {
   margin-top: 1rem;
   text-align: center;
   background-color: var(--green);
+  -webkit-box-shadow: 0px 2px 0px 1px rgba(54, 130, 97, 0.315);
   box-shadow: 0px 2px 0px 1px rgba(54, 130, 97, 0.315);
 }
 
@@ -183,6 +200,8 @@ body {
   /* opacity: 0.6; */
   background-color: rgba(30, 142, 177, 0.753);
   cursor: pointer;
+  -webkit-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
 
@@ -198,6 +217,12 @@ small {
 @media (width>=1074px) {
   body {
     /* background-image: url(./images/bg-intro-desktop.png); */
+    background-image: -o-linear-gradient(
+        206deg,
+        rgb(0 255 137 / 35%),
+        rgb(4 42 68)
+      ),
+      url(./images/bg-intro-desktop.png);
     background-image: linear-gradient(
         244deg,
         rgb(0 255 137 / 35%),
@@ -207,8 +232,13 @@ small {
   }
 
   .main-container {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
 
